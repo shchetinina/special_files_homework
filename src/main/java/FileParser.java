@@ -53,11 +53,11 @@ public class FileParser {
                 for (int j = 0; j < employeeParams.getLength(); j++) {
                     Node currentNode = employeeParams.item(j);
                     switch (currentNode.getNodeName()){
-                        case "id": employee.id = Long.parseLong(currentNode.getTextContent()); break;
-                        case "firstName": employee.firstName = currentNode.getTextContent(); break;
-                        case "lastName": employee.lastName = currentNode.getTextContent(); break;
-                        case "country": employee.country = currentNode.getTextContent(); break;
-                        case "age": employee.age = Integer.parseInt(currentNode.getTextContent()); break;
+                        case "id": employee.setId(Long.parseLong(currentNode.getTextContent())); break;
+                        case "firstName": employee.setFirstName(currentNode.getTextContent()); break;
+                        case "lastName": employee.setLastName(currentNode.getTextContent()); break;
+                        case "country": employee.setCountry(currentNode.getTextContent()); break;
+                        case "age": employee.setAge(Integer.parseInt(currentNode.getTextContent())); break;
                         default: break;
                     }
                 }
